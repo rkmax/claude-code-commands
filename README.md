@@ -12,8 +12,10 @@ Use these commands in Claude Code with `/command-name`:
 - `/critical:debate` - Structured debate and discussion
 - `/explore` - Codebase exploration and understanding
 - `/implement` - Feature implementation with TDD
+- `/improve` - Code improvement and optimization workflows
 - `/review:arch` - Architecture review and analysis
 - `/review:code` - Code review and analysis
+- `/secure` - Security analysis and hardening workflows
 - `/setup` - Project setup and configuration
 - `/tdd` - Test-driven development workflow
 - `/ui` - UI/UX design and implementation
@@ -23,11 +25,29 @@ Use these commands in Claude Code with `/command-name`:
 
 ## Installation
 
-Copy the `commands/` directory to your Claude Code commands directory:
+### Prerequisites
 
-```bash
-cp -r commands/ ~/.claude/commands/
-```
+- [Claude Code](https://www.anthropic.com/claude-code) must be installed and configured
+
+### Install Commands
+
+1. Create the Claude Code commands directory if it doesn't exist:
+   ```bash
+   mkdir -p ~/.claude/commands/
+   ```
+
+2. Copy the commands to your Claude Code commands directory:
+   ```bash
+   cp -r commands/ ~/.claude/commands/
+   ```
+
+3. Verify the installation by checking that the commands directory contains the files:
+   ```bash
+   ls ~/.claude/commands/
+   ```
+   You should see the command files listed.
+
+4. Restart Claude Code if it's currently running to load the new commands.
 
 See the [slash commands documentation](https://docs.anthropic.com/en/docs/claude-code/slash-commands) for more details.
 
